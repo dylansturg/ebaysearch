@@ -114,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -155,7 +154,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LocationService\ReverseGeocoder.cs" />
+    <Compile Include="Models\EbayItem.cs" />
+    <Compile Include="Models\EbayResponseModel.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\ItemQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchService\EbayDetailRequest.cs" />
+    <Compile Include="SearchService\EbayRequest.cs" />
+    <Compile Include="SearchService\EbayResponse.cs" />
+    <Compile Include="SearchService\EbayService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -185,6 +193,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="privateSettings.config" />
     <None Include="Properties\PublishProfiles\eBayAPI.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

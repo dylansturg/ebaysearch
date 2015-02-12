@@ -7,27 +7,25 @@ namespace eBayAPI.Models
 {
     public class Item
     {
-        protected String displayName { get; set; }
-        protected String productCode { get; set; }
-        protected List<ItemPrice> priceData { get; set; }
-        protected String imageUrl { get; set; }
+        public String DisplayName { get; set; }
+        public String ProductCode { get; set; }
+        public List<ItemPrice> PriceData { get; set; }
+        public String ImageUrl { get; set; }
     }
 
     public class ItemPrice
     {
-        protected Item mItem { get; set; }
+        public Seller Seller { get; set; }
 
-        protected Seller mSeller { get; set; }
+        public DateTime FoundDate { get; set; }
+        public String Type { get; set; }
+        public String BuyLocation { get; set; }
 
-        protected DateTime mFoundDate { get; set; }
-        protected String mType { get; set; }
-        protected String mBuyLocation { get; set; }
-
-        protected double mPrice { get; set; }
+        public double Price { get; set; }
     }
 
     public class Seller
     {
-        protected String mName { get; set; }
+        public String Name { get; set; }
     }
 }

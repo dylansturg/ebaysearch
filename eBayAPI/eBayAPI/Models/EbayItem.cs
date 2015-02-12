@@ -7,18 +7,31 @@ namespace eBayAPI.Models
 {
     public class EbayItem
     {
-        protected String title { get; set; }
-        protected String globalId { get; set; }
-        protected String galleryURL { get; set; }
-        protected String viewItemURL { get; set; }
-        protected String productIdType { get; set; }
-        protected String productIdValue { get; set; }
-        protected String location { get; set; }
-        protected String currentPrice { get; set; }
-        protected String startTime { get; set; }
-        protected String endTime { get; set; }
+        public List<String> title { get; set; }
+        public List<String> globalId { get; set; }
+        public List<String> galleryURL { get; set; }
+        public List<String> viewItemURL { get; set; }
+        public List<ProductId> productId { get; set; }
+        public List<SellingStatus> sellingStatus { get; set; }
 
-        protected String UPC { get; set; }
-        protected String stockThumbnailURL { get; set; }
+        public String UPC { get; set; }
+        public String stockThumbnailURL { get; set; }
     }
+
+    public class ProductId
+    {
+        public String __value__ { get; set; }
+    }
+
+    public class SellingStatus
+    {
+        public List<Price> currentPrice { get; set; }
+    }
+
+    public class Price
+    {
+        public String __value__ { get; set; }
+    }
+        
+
 }
